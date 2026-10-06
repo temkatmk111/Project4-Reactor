@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body { display: flex;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.center-position {
+   
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.border-size {
+  height: var(--border-size);
+  width: var(--border-size);
+}
+
+.border {
+  border: var(--width) var(--type) var(--color);
+  border-radius: var(--border-radius);
+}
+.period {
+  animation: period var(--period)linear infinite;
+}
+.period-r {
+  animation: period var(--period)alternate-reverse linear infinite;
+}
+.filter {
+    filter:  var(--filter);
+}
+@keyframes period {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
